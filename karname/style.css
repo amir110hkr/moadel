@@ -1,0 +1,95 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+  background-color:rgb(112, 112, 112)
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .flex-container > div {
+    border: 6px rgb(0, 0, 0) solid;
+    background-color: #f0ffd5;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    display: block;
+    width: 300px;
+  align-items: center;
+  justify-content: center;
+  }
+  .flex-container > div>input{
+    padding: 15px;
+    width: 90px;
+    height: 40px;
+    font-size: 25px;
+    color:blue
+  }
+ .doit{
+    cursor: pointer;
+    background-color: chartreuse;
+    border: 10px white solid;
+    width: 200px;
+    margin: auto;
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .doit:hover{
+    background-color: rgb(95, 191, 0);
+  }
+ p{
+    font-size: 45px;
+    color: blueviolet;
+    text-align: center;
+    margin-top: 5px;
+  }
