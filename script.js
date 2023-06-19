@@ -35,6 +35,7 @@ function doit()
       for (var i in point_x) {
         sum2 += point_x[i];
       }
+    window.alert("Min points is :"+sum1);
     var result1=sum1/18;
     var result2=sum2/18;
     var result1=result1.toFixed(2);
