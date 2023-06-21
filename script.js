@@ -35,7 +35,11 @@ function doit()
       for (var i in point_x) {
         sum2 += point_x[i];
       }
-    window.alert("Min points is :"+sum1);
+    var beforeavg=document.getElementById("beforeavg").value
+    var fullavg=((beforeavg*17)+sum1)/35
+    console.log(beforeavg)
+    console.log(sum1)
+    window.alert("معدل کل شما :"+fullavg)
     var result1=sum1/18;
     var result2=sum2/18;
     var result1=result1.toFixed(2);
