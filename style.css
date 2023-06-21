@@ -91,14 +91,14 @@ body{
   }
  p{
     font-size: 45px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-align: center;
     margin-top: 5px;
 
   }
   .flex-container > div:nth-of-type(odd) {
     background-color:#00a259;
-    color:rgb(255, 255, 255)
+    color:rgb(3, 3, 3)
     }
     @font-face {
       font-family: meow;
