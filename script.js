@@ -40,6 +40,7 @@ function doit()
     console.log(beforeavg)
     console.log(sum1)
     window.alert("معدل کل شما :"+fullavg)
+    window.alert("Min point score : "+sum1+" |  Max point score : "+sum2)
     var result1=sum1/18;
     var result2=sum2/18;
     var result1=result1.toFixed(2);
