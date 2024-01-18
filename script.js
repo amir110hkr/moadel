@@ -7,26 +7,24 @@ function doit()
 {
     const point_m=[];
     const point_x=[];
-    point_m.push(dars(1,"graphic-m"));
-    point_x.push(dars(1,"graphic-x"));
-    point_m.push(dars(2,"andishe-m"));
-    point_x.push(dars(2,"andishe-x"));
-    point_m.push(dars(2,"mobile-m"));
-    point_x.push(dars(2,"mobile-x"));
     point_m.push(dars(2,"payegah-m"));
     point_x.push(dars(2,"payegah-x"));
-    point_m.push(dars(2,"tej-m"));
-    point_x.push(dars(2,"tej-x"));
-    point_m.push(dars(1,"body-m"));
-    point_x.push(dars(1,"body-x"));
-    point_m.push(dars(2,"fani-m"));
-    point_x.push(dars(2,"fani-x"));
-    point_m.push(dars(3,"data-m"));
-    point_x.push(dars(3,"data-x"));
     point_m.push(dars(2,"web-m"));
     point_x.push(dars(2,"web-x"));
-    point_m.push(dars(1,"shabake-m"));
-    point_x.push(dars(1,"shabake-x"));
+    point_m.push(dars(2,"mobile-m"));
+    point_x.push(dars(2,"mobile-x"));
+    point_m.push(dars(2,"taj-m"));
+    point_x.push(dars(2,"taj-x"));
+    point_m.push(dars(2,"os-m"));
+    point_x.push(dars(2,"os-x"));
+    point_m.push(dars(2,"python-m"));
+    point_x.push(dars(2,"python-x"));
+    point_m.push(dars(2,"gos-m"));
+    point_x.push(dars(2,"gos-x"));
+    point_m.push(dars(2,"madar-m"));
+    point_x.push(dars(2,"madar-x"));
+    point_m.push(dars(2,"khanevade-m"));
+    point_x.push(dars(2,"khanevade-x"));
     var sum1=0
     var sum2=0
     for (var i in point_m) {
@@ -35,12 +33,6 @@ function doit()
       for (var i in point_x) {
         sum2 += point_x[i];
       }
-    var beforeavg=document.getElementById("beforeavg").value
-    var fullavg=((beforeavg*17)+sum1)/35
-    console.log(beforeavg)
-    console.log(sum1)
-    window.alert("معدل کل شما :"+fullavg)
-    window.alert("Min point score : "+sum1+" |  Max point score : "+sum2)
     var result1=sum1/18;
     var result2=sum2/18;
     var result1=result1.toFixed(2);
