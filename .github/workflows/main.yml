@@ -1,4 +1,4 @@
-name: Send Data to API on Commit
+name: Send Data to API on Commit with token getting
 
 on:
   push:  # Trigger on every push
