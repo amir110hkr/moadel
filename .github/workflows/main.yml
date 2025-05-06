@@ -8,8 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository with PAT
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_PAT }}
 
       - name: Call API and save response to file
         run: |
