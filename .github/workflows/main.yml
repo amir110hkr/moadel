@@ -1,0 +1,19 @@
+name: Call API on Commit
+
+on:
+  push:  # Trigger this workflow on every push to any branch
+
+jobs:
+  call-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Call external API
+        run: |
+          curl -X POST https://example.com/my-api-endpoint \
+               -H "Content-Type: application/json" \
+               -H "Authorization: Bearer ${{ secrets.MY_API_TOKEN }}" \
+               -d '{"event": "new_commit", "repo": "${{ github.repository }}", "commit": "${{ github.sha }}"}'
