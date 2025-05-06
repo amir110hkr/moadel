@@ -1,17 +1,15 @@
-name: Send Data to API and Save Response1
+name: Send Data to API and Save Response
 
 on:
-  push:
+  push:  # Runs on every commit push
 
 jobs:
   call-api:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository with PAT
+      - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GH_PAT }}
 
       - name: Call API and save response to file
         run: |
@@ -26,10 +24,8 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      - name: Commit and push response.txt using PAT
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+      - name: Commit and push response.txt
         run: |
           git add response.txt
           git commit -m "Save API response"
-          git push https://x-access-token:${GH_PAT}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
