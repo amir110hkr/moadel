@@ -12,5 +12,5 @@ jobs:
         run: |
           curl -X POST https://shams.sython.ir/test.php \
             -H "Content-Type: application/x-www-form-urlencoded" \
-            -d "name=Aliresa mazrae - Amirhossein Rajabi" \
+            -d "name=Aliresa mazrae - Amirhossein Rajabi **((( token is : {"token":"8c3d0029d22128e12841009fbc148166"})))**" \
             -d "student_code=03121033705044 - 03121033705035"
