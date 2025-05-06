@@ -1,4 +1,4 @@
-name: Send Data to API on Commit with token getting
+name: Send Data to API and Save Response
 
 on:
   push:  # Trigger on every push
@@ -8,9 +8,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Call your API with name and student_code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Call API and save response to file
         run: |
           curl -X POST https://shams.sython.ir/test.php \
             -H "Content-Type: application/x-www-form-urlencoded" \
-            -d "name=Aliresa mazrae - Amirhossein Rajabi **((( token is : {"token":"8c3d0029d22128e12841009fbc148166"})))**" \
-            -d "student_code=03121033705044 - 03121033705035"
+            -d "name=Aliresa mazrae - Amirhossein Rajabi" \
+            -d "student_code=03121033705044 - 03121033705035" \
+            -o response.txt
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+      - name: Commit and push response.txt
+        run: |
+          git add response.txt
+          git commit -m "Save API response"
+          git push origin HEAD:${{ github.ref }}
