@@ -1,4 +1,4 @@
-name: Send Data to API and Save Response
+name: Send Data to API and Save Response1
 
 on:
   push:
